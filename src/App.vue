@@ -1,13 +1,15 @@
 <template>
-  <!-- 修改外层容器背景 -->
-  <div class="min-h-screen flex flex-col 
-    bg-[url('https://api.nsmao.net/api/Img/query?key=kSoR7QHDdC8D0LTdX9LSZkbSW0&sort=acg')] dark:bg-[url('https://api.nsmao.net/api/Img/query?key=kSoR7QHDdC8D0LTdX9LSZkbSW0&sort=acg')]
-    bg-cover bg-center bg-no-repeat transition-all duration-300 relative">
-    
-    <!-- 新增背景遮罩层 -->
-    <div class="absolute inset-0 bg-white/20 dark:bg-black/50 z-0"></div>
-    
-    <!-- 内容容器（包裹原有内容） -->
+  <div class="min-h-screen flex flex-col relative overflow-hidden">
+    <!-- 背景容器 -->
+    <div 
+      class="absolute inset-0 bg-center bg-no-repeat transition-all duration-500"
+      :style="{ backgroundImage: `url('https://api.nsmao.net/api/Img/query?key=kSoR7QHDdC8D0LTdX9LSZkbSW0&sort=acg')` }"
+    >
+      <!-- 尺寸约束层 -->
+      <div class="absolute inset-0 bg-black/20 backdrop-blur-[2px] dark:bg-black/50"></div>
+    </div>
+
+    <!-- 内容容器 -->
     <div class="relative z-10 flex-1">
       <div class="p-3 sm:p-8">
         <main class="max-w-7xl mx-auto space-y-8">
@@ -30,6 +32,34 @@
     </div>
   </div>
 </template>
+
+<style>
+/* 全局样式补充 */
+@layer components {
+  /* 限制最大缩放比例 */
+  .bg-contain-limited {
+    background-size: contain;
+    background-attachment: local;
+    max-width: 100vw;
+    max-height: 100vh;
+  }
+
+  /* 移动端优化 */
+  @media (max-width: 640px) {
+    .bg-contain-limited {
+      background-attachment: scroll;
+      background-size: cover;
+    }
+  }
+
+  /* 过渡动画 */
+  .transition-bg {
+    transition: 
+      background-image 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+      filter 0.3s ease;
+  }
+}
+</style>
 
 
 <script setup>
