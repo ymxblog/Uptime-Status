@@ -74,7 +74,7 @@ export const getChartColor = (value, isBeforeCreation, status) => {
  * @returns {Object} 图表配置对象
  */
 export const getStatusChartConfig = (monitor, dateRange, isMobile) => {
-  const data = monitor.stats?.dailyUptimes ?? Array(30).fill(null)
+  const data = monitor.stats?.dailyUptimes ?? Array(90).fill(null)
 
   // 添加时间验证逻辑
   const createTime = monitor.create_datetime * 1000
