@@ -81,4 +81,6 @@
 #app {
   width: 100%;
   margin: 0 auto;
+  background: url('https://api.nsmao.net/api/Img/query?key=kSoR7QHDdC8D0LTdX9LSZkbSW0&sort=acg') no-repeat center center fixed; 
+  background-size: cover;
 }
