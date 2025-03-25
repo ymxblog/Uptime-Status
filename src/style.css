@@ -41,6 +41,8 @@
   font-family: HarmonyOS_Regular,MiSans,HarmonyOS Sans SC,sans-serif; /* 字体 */
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+}
+body {
   background: url('https://api.nsmao.net/api/Img/query?key=kSoR7QHDdC8D0LTdX9LSZkbSW0&sort=acg') no-repeat center center fixed; 
   background-size: cover;
 }
