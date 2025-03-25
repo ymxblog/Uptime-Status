@@ -12,7 +12,7 @@
  * @property {number} HOURS_IN_DAY - 每天的小时数
  */
 const CONSTANTS = {
-  THIRTY_DAYS: 30,
+  THIRTY_DAYS: 90,
   MS_PER_DAY: 24 * 60 * 60 * 1000,
   DOWNTIME_TYPE: 1,
   HOURS_IN_DAY: 24
