@@ -38,13 +38,9 @@
 }
 
 * {
-  font-family: HarmonyOS_Regular,MiSans,HarmonyOS Sans SC,sans-serif; /* 字体 */
+  font-family: MiSans,HarmonyOS_Regular,HarmonyOS Sans SC,sans-serif; /* 字体 */
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
-}
-.flex-1 p-3 sm:p-8 {
-  background: url('https://api.nsmao.net/api/Img/query?key=kSoR7QHDdC8D0LTdX9LSZkbSW0&sort=acg') no-repeat center center fixed; 
-  background-size: cover;
 }
 
 /* 添加通用卡片样式 */
