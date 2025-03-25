@@ -33,34 +33,6 @@
   </div>
 </template>
 
-<style>
-/* 全局样式补充 */
-@layer components {
-  /* 限制最大缩放比例 */
-  .bg-contain-limited {
-    background-size: contain;
-    background-attachment: local;
-    max-width: 100vw;
-    max-height: 100vh;
-  }
-
-  /* 移动端优化 */
-  @media (max-width: 640px) {
-    .bg-contain-limited {
-      background-attachment: scroll;
-      background-size: cover;
-    }
-  }
-
-  /* 过渡动画 */
-  .transition-bg {
-    transition: 
-      background-image 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-      filter 0.3s ease;
-  }
-}
-</style>
-
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
