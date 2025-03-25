@@ -33,7 +33,7 @@
     <div class="flex flex-col items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
       <div class="flex items-center gap-6">
         <a 
-          :href="/github.com/yeminxi"
+          :href="'https://github.com/yeminxi'"
           target="_blank"
           rel="noopener noreferrer"
           class="inline-flex items-center justify-center p-1.5 rounded-full transition-colors duration-200
