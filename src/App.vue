@@ -1,26 +1,36 @@
 <template>
-  <div class="min-h-screen flex flex-col bg-gradient-to-br from-gray-50 via-gray-50 to-gray-100 
-    dark:from-gray-900 dark:via-gray-900 dark:to-gray-800 transition-colors duration-300">
-    <div class="flex-1 p-3 sm:p-8">
-      <main class="max-w-7xl mx-auto space-y-8">
-        <Header 
-          ref="headerRef"
-          :title="title"
-          :is-refreshing="isRefreshing"
-          :is-dark="isDark"
-          @refresh="refreshData"
-          @toggle-theme="toggleTheme"
-        />
-        <Stats :monitors="monitors" />
-        <Card 
-          :monitors="monitors"
-          :error="errorMessage"
-        />
-      </main>
+  <!-- 修改外层容器背景 -->
+  <div class="min-h-screen flex flex-col 
+    bg-[url('https://api.nsmao.net/api/Img/query?key=kSoR7QHDdC8D0LTdX9LSZkbSW0&sort=acg')] dark:bg-[url('https://api.nsmao.net/api/Img/query?key=kSoR7QHDdC8D0LTdX9LSZkbSW0&sort=acg')]
+    bg-cover bg-center bg-no-repeat transition-all duration-300 relative">
+    
+    <!-- 新增背景遮罩层 -->
+    <div class="absolute inset-0 bg-white/20 dark:bg-black/50 z-0"></div>
+    
+    <!-- 内容容器（包裹原有内容） -->
+    <div class="relative z-10 flex-1">
+      <div class="p-3 sm:p-8">
+        <main class="max-w-7xl mx-auto space-y-8">
+          <Header 
+            ref="headerRef"
+            :title="title"
+            :is-refreshing="isRefreshing"
+            :is-dark="isDark"
+            @refresh="refreshData"
+            @toggle-theme="toggleTheme"
+          />
+          <Stats :monitors="monitors" />
+          <Card 
+            :monitors="monitors"
+            :error="errorMessage"
+          />
+        </main>
+      </div>
+      <Footer />
     </div>
-    <Footer />
   </div>
 </template>
+
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
