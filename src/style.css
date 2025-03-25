@@ -82,3 +82,24 @@
   width: 100%;
   margin: 0 auto;
 }
+
+/* 新增全局样式 */
+@layer base {
+  html, body {
+    @apply h-full w-full;  /* 确保容器撑满视口 */
+  }
+}
+
+/* 强制背景表现 */
+.bg-cover {
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+/* 移动端优化 */
+@media (max-width: 640px) {
+  .bg-cover {
+    background-attachment: scroll;  /* 移动端取消固定背景 */
+    background-position: 60% center;  /* 聚焦图片核心区域 */
+  }
+}
