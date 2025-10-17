@@ -121,6 +121,10 @@ VITE_UPTIMEROBOT_API_URL = "/api/status"
 
 # 站点名称
 VITE_APP_TITLE = "梦爱吃鱼"
+
+# 监控面板排序方式
+# 支持 friendly_name 和 create_datetime 两种方式
+VITE_UPTIMEROBOT_STATUS_SORT = "friendly_name"
 ```
 
 4. 开发调试
