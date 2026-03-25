@@ -1,8 +1,8 @@
 <template>
   <!-- 修改外层容器 -->
   <div class="min-h-screen w-full flex flex-col 
-    bg-[url('https://api.nsmao.net/api/Img/query?key=kSoR7QHDdC8D0LTdX9LSZkbSW0&sort=acg')] 
-    dark:bg-[url('https://api.nsmao.net/api/Img/query?key=kSoR7QHDdC8D0LTdX9LSZkbSW0&sort=acg')]
+    bg-[url('https://images.418121.xyz/random?dir=blog/camera/&&type=img')] 
+    dark:bg-[url('https://images.418121.xyz/file/lqlb/1760698332227_1288651.png')]
     bg-cover bg-center bg-no-repeat bg-fixed  <!-- 新增 bg-fixed -->
     transition-all duration-300 relative">
     
